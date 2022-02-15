@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import FAQItem from '../../components/FAQItem';
-import * as S from './styled';
+import * as S from '../../styles/contacts.styled';
 
 function Contacts() {
   const [qaTypes, setQaTypes] = useState([]);

@@ -1,4 +1,4 @@
-import { contactsStyle } from './../../pages/contacts/styled';
+import { contactsStyle } from '../../styles/contacts.styled';
 import styled from 'styled-components';
 
 export const Button = styled.button`

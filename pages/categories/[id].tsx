@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import CategoryNav from '../../components/CategoryNav';
 import CategoryList from '../../components/shared/CategoryList';
 import { BRAND } from '../../constants/api';
-import * as S from './styled';
+import * as S from '../../styles/categories.styled';
 
 interface Categories {
   handlePageTitle: (title: string) => void;

@@ -1,4 +1,4 @@
-import { contactsStyle } from './../contacts/styled';
+import { contactsStyle } from './contacts.styled';
 import styled from 'styled-components';
 
 export const ProductCounter = styled.div`

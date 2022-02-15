@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import ConItem from '../../components/shared/ConItem';
 import OptionButton from '../../components/OptionButton';
 import WarningBox from '../../components/WarningBox';
-import { DetailProps } from './types';
-import * as S from './styled';
+import { DetailProps } from '../../items.types';
+import * as S from '../../styles/items.styled';
 
 function Items({ conItem: DetailConItem }: DetailProps) {
   const [isOpened, setIsOpened] = useState(false);

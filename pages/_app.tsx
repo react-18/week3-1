@@ -2,7 +2,6 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { setConstantValue } from 'typescript';
 import Header from '../components/Header';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/theme';

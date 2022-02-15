@@ -75,3 +75,4 @@ describe('', () => {
     cy.location('pathname').should('equal', '/');
   });
 });
+export {};

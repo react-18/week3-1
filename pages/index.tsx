@@ -18,8 +18,6 @@ const Home: NextPage = () => {
     url: SOON,
   });
 
-  console.log('mainpage');
-
   return (
     <Wrap>
       <Carousel />

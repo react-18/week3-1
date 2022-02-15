@@ -17,7 +17,6 @@ function Contacts() {
       `https://api2.ncnc.app/qas?qaTypeId=${qaTypeId}`,
     );
     setQas(res.data.qas);
-    console.log(res.data.qas);
   }
 
   function onClickFAQType(typeId) {

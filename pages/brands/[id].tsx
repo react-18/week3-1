@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import ConItem from '../../components/shared/ConItem';
 import * as S from '../../styles/brands.styled';
 
 function Brands({ handlePageTitle, data, query }) {
-  console.log(query);
   const [products, setProducts] = useState([]);
   const brands = data.conCategory1.conCategory2s;
   const selectedBrand = brands.filter((brand) => {
@@ -25,13 +25,15 @@ function Brands({ handlePageTitle, data, query }) {
       <S.ProductList>
         {products.length &&
           products.map((item) => (
-            <p key={item.id}>
-              <ConItem
-                conItem={item}
-                brandName={selectedBrand[0].name}
-                isList={true}
-              />
-            </p>
+            <Link key={item.id} href={`/items/${item.id}`} passHref>
+              <a>
+                <ConItem
+                  conItem={item}
+                  brandName={selectedBrand[0].name}
+                  isList
+                />
+              </a>
+            </Link>
           ))}
       </S.ProductList>
     </>

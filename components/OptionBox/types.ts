@@ -6,5 +6,6 @@ interface Option {
 
 export interface OptionBoxProps {
   options: Option[];
+  originalPrice: number;
   onSelect: () => void;
 }

@@ -36,6 +36,7 @@ function Items({ conItem: DetailConItem }: DetailProps) {
       <OptionButton
         isOpened={isOpened}
         isSelected={isSelected}
+        originalPrice={originalPrice}
         onClick={() => setIsOpened(!isOpened)}
         onSelect={() => setIsSelected(!isSelected)}
         options={options}

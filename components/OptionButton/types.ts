@@ -7,6 +7,7 @@ interface Option {
 export interface OptionButtonProps {
   isOpened: boolean;
   isSelected: boolean;
+  originalPrice: number;
   onClick: () => void;
   onSelect: () => void;
   options: Option[];

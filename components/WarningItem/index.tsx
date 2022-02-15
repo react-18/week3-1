@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import * as S from './styled';
 import { WarningItemProps } from './types';

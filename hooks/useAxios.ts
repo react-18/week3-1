@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 

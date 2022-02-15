@@ -16,7 +16,6 @@ interface Categories {
 }
 
 function CategoryList({ link, categories, type, categoryId }: Categories) {
-  // console.log(link);
   return (
     <S.Wrap>
       <S.ListContainer>

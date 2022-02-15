@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import * as S from './styled';
 
 function MyPage({ isSideBarOpened, setIsSideBarOpened }) {
-  console.log(isSideBarOpened);
   const sideBarRef = useRef(null);
 
   return (

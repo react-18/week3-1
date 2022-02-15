@@ -7,10 +7,7 @@ import MyPage from '../MyPage';
 import * as S from './styled';
 
 function Header({ pageTitle }) {
-  console.log(pageTitle);
   const router = useRouter();
-  console.log(router);
-  console.log(router.pathname);
   const [isSideBarOpened, setIsSideBarOpened] = useState(false);
   const path = router.pathname;
 

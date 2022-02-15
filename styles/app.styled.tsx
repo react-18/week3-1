@@ -21,5 +21,5 @@ export const Header = styled.div`
 `;
 
 export const Page = styled.main`
-  margin-top: 40px;
+  margin-top: 60px;
 `;

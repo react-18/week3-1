@@ -28,6 +28,8 @@ function Header({ pageTitle }) {
           setIsSideBarOpened={setIsSideBarOpened}
         />
       );
+    } else if (path.includes('categories')) {
+      return <BackButton />;
     }
   }
 
@@ -51,14 +53,14 @@ function Header({ pageTitle }) {
 
   return (
     <S.Wrapper>
+      <MyPage
+        isSideBarOpened={isSideBarOpened}
+        setIsSideBarOpened={setIsSideBarOpened}
+      />
       <S.Header>
-        {handleLeftButton()}
+        <S.LeftBtnWrapper>{handleLeftButton()}</S.LeftBtnWrapper>
         <S.PageTitle>{handlePageTitle()}</S.PageTitle>
         {handleRightButton()}
-        <MyPage
-          isSideBarOpened={isSideBarOpened}
-          setIsSideBarOpened={setIsSideBarOpened}
-        />
       </S.Header>
     </S.Wrapper>
   );

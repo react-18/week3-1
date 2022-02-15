@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   top: 0;
   right: 0;
   padding: 0 10px 0 0;
-  transform: translateY(80%);
+  transform: translate(-50%, 80%);
   cursor: pointer;
 
   & > svg {

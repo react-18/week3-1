@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contactsStyle } from '../../pages/contacts/styled';
+import { contactsStyle } from '../../styles/contacts.styled';
 
 export const QuestionWrapper = styled.li`
   display: flex;

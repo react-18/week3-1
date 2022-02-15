@@ -2,7 +2,7 @@ import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import React, { useEffect, useState } from 'react';
 import ConItem from '../../components/shared/ConItem';
-import * as S from './styled';
+import * as S from '../../styles/brands.styled';
 
 function Brands({ handlePageTitle, data, query }) {
   console.log(query);

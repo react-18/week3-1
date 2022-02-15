@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from '../components/Header';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/theme';
-import * as S from './styled';
+import * as S from '../styles/app.styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [pageTitle, setPageTitle] = useState('니콘내콘');

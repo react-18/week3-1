@@ -11,6 +11,7 @@ declare module 'styled-components' {
       navGray: string;
       borderGray: string;
       textGray: string;
+      backgroundGray: string;
     };
     font: {
       xLarge: string;

@@ -24,9 +24,21 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
   font-family: 'Apple SD Gothic Neo';
-  src: url('/fonts/appleSD/AppleSDGothicNeoH.ttf') format('truetype');
+  src: url('/fonts/appleSD/AppleSDGothicNeoB.ttf') format('truetype');
   font-weight: 600;
   };
+
+  /* @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/appleSD/AppleSDGothicNeoEB.ttf') format('truetype');
+  font-weight: 700;
+  };
+
+  @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/appleSD/AppleSDGothicNeoH.ttf') format('truetype');
+  font-weight: 900;
+  }; */
 
   body {
     display: flex;
@@ -34,6 +46,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.font.original};
     color: ${({ theme }) => theme.color.black};
     overflow-y: scroll;
+    background-color: ${({ theme }) => theme.color.backgroundGray};
     font-family: "Apple SD Gothic Neo";
   }
   li {

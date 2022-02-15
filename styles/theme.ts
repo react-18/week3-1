@@ -10,6 +10,7 @@ export const theme: DefaultTheme = {
     navGray: '#C4C4C4',
     borderGray: '#e5e5e5',
     textGray: '#808080',
+    backgroundGray: '#ddd',
   },
   font: {
     xLarge: '16px',

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrap = styled.div`
   width: 375px;
   height: 812px;
-  font-size: 14px;
   color: ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.lightGray};
   overflow-y: scroll;

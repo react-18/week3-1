@@ -37,7 +37,7 @@ const Category: NextPage<Categories> = ({
   }, [id]);
 
   useEffect(() => {
-    handlePageTitle(query);
+    handlePageTitle('브랜드');
   }, [query, handlePageTitle]);
 
   return (

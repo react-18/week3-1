@@ -1,9 +1,9 @@
-import { contactsStyle } from '../../styles/contacts.styled';
 import styled from 'styled-components';
 
 export const Button = styled.button`
   position: absolute;
-  left: ${contactsStyle.margin.M};
+  top: 15px;
+  left: 25px;
   width: 12px;
   height: 12px;
   border: none;

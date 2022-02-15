@@ -10,9 +10,13 @@ interface Category {
 
 interface Categories {
   categories: Category[];
+  type: string;
+  link: string;
+  categoryId: number;
 }
 
-function CategoryList({ categories }: Categories) {
+function CategoryList({ link, categories, type, categoryId }: Categories) {
+  // console.log(link);
   return (
     <S.Wrap>
       <S.ListContainer>
@@ -20,9 +24,11 @@ function CategoryList({ categories }: Categories) {
           <CategoryItem
             imgUrl={imageUrl}
             name={name}
-            type="category"
+            type={type}
             key={id}
             id={id}
+            link={`${link}${id}`}
+            categoryId={categoryId}
           />
         ))}
       </S.ListContainer>

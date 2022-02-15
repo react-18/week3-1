@@ -18,10 +18,16 @@ const Home: NextPage = () => {
     url: SOON,
   });
 
+  console.log('mainpage');
+
   return (
     <Wrap>
       <Carousel />
-      <CategoryList categories={response?.data.conCategory1s} type="category" />
+      <CategoryList
+        link="/categories/"
+        categories={response?.data.conCategory1s}
+        type="category"
+      />
       <SubTitle>
         <span>놓치지 마세요</span>
         <h2>오늘의 땡처리콘!</h2>
@@ -32,6 +38,7 @@ const Home: NextPage = () => {
           key={item.id}
           brandName="땡처리"
           isList={true}
+          // link={`/categories/${item.id}`}
         />
       ))}
     </Wrap>

@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
@@ -31,12 +32,16 @@ const Home: NextPage = () => {
         <h2>오늘의 땡처리콘!</h2>
       </SubTitle>
       {res?.data.conItems.map((item) => (
-        <ConItem
-          conItem={item}
-          key={item.id}
-          brandName="땡처리"
-          isList={true}
-        />
+        <Link key={item.id} href={`/items/${item.id}`} passHref>
+          <a>
+            <ConItem
+              conItem={item}
+              key={item.id}
+              brandName="땡처리"
+              isList={true}
+            />
+          </a>
+        </Link>
       ))}
     </Wrap>
   );

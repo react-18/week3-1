@@ -6,6 +6,7 @@ import { OptionButtonProps } from './types';
 function OptionButton({
   isOpened,
   isSelected,
+  originalPrice,
   onClick,
   onSelect,
   options,
@@ -16,15 +17,15 @@ function OptionButton({
       {isOpened && (
         <S.BackgroundDimm>
           <S.InnerContainer>
-            <OptionBox options={options} onSelect={onSelect} />
+            <OptionBox
+              options={options}
+              originalPrice={originalPrice}
+              onSelect={onSelect}
+            />
           </S.InnerContainer>
         </S.BackgroundDimm>
       )}
-      <S.Button
-        isSelected={!isOpened && !isSelected}
-        disabled={isOpened || selected}
-        onClick={onClick}
-      >
+      <S.Button isSelected onClick={onClick}>
         {isOpened ? '구매하기' : '옵션선택하기'}
       </S.Button>
     </>

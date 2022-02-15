@@ -5,5 +5,6 @@ interface Option {
 }
 export interface OptionItemProps {
   option: Option;
+  originalPrice: number;
   onSelect: () => void;
 }

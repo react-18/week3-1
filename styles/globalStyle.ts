@@ -49,6 +49,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.color.backgroundGray};
     font-family: "Apple SD Gothic Neo";
   }
+  a {
+    color:${({ theme }) => theme.color.black}; 
+    text-decoration: none;
+    outline: none;
+  }
+  a:hover, a:active {
+    text-decoration: none;
+  }
   li {
     list-style: none;
   }

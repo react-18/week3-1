@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.li<{ isList?: boolean }>`
   list-style: none;
-  width: 100%;
+  width: 375px;
+  padding: 13px 0 13px 0;
   border-bottom: 1px solid #e5e5e5;
   background-color: white;
 

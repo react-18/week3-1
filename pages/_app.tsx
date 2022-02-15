@@ -1,21 +1,24 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import Header from '../components/Header';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/theme';
 import * as S from './styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const [pageTitle, setPageTitle] = useState('니콘내콘');
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Head>
-        <title>React 18</title>
-      </Head>
+      <Head>React 18</Head>
       <S.Wrap>
-        <S.Header>header!!</S.Header>
+        <S.Header>
+          <Header pageTitle={pageTitle} />
+        </S.Header>
         <S.Page>
-          <Component {...pageProps} />
+          <Component {...pageProps} setPageTitle={setPageTitle} />
         </S.Page>
       </S.Wrap>
     </ThemeProvider>

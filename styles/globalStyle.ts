@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
   ${reset}
   * {
     box-sizing: border-box;
@@ -11,16 +10,35 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  body {
-    width: 375px;
-    height: 812px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    color: ${({ theme }) => theme.color.black};
-    background-color: ${({ theme }) => theme.color.lightGray};
-    overflow-y: scroll;
-  }
+  @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/appleSD/AppleSDGothicNeoL.ttf') format('truetype');
+  font-weight: 400;
+  };
 
+  @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/appleSD/AppleSDGothicNeoM.ttf') format('truetype');
+  font-weight: 500;
+  };
+
+  @font-face {
+  font-family: 'Apple SD Gothic Neo';
+  src: url('/fonts/appleSD/AppleSDGothicNeoH.ttf') format('truetype');
+  font-weight: 600;
+  };
+
+  body {
+    display: flex;
+    justify-content: center;
+    font-size: ${({ theme }) => theme.font.original};
+    color: ${({ theme }) => theme.color.black};
+    overflow-y: scroll;
+    font-family: "Apple SD Gothic Neo";
+  }
+  li {
+    list-style: none;
+  }
   input {
     border: none;
     outline: none;

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/theme';
+import * as S from './styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -11,7 +12,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <title>React 18</title>
       </Head>
-      <Component {...pageProps} />
+      <S.Wrap>
+        <S.Header>header!!</S.Header>
+        <S.Page>
+          <Component {...pageProps} />
+        </S.Page>
+      </S.Wrap>
     </ThemeProvider>
   );
 };

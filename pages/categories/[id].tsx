@@ -38,7 +38,7 @@ const Category: NextPage<Categories> = ({
 
   useEffect(() => {
     handlePageTitle('브랜드');
-  }, [query, handlePageTitle]);
+  }, [query]);
 
   return (
     <S.Wrap>

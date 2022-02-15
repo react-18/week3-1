@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
@@ -19,7 +20,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
 
   useEffect(() => {
     fetchData(axiosParams);
-  }, [axiosParams]);
+  }, []);
 
   return { response, error, loading };
 };

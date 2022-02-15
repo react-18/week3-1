@@ -13,11 +13,14 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     width: 375px;
+    height: 812px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
     color: ${({ theme }) => theme.color.black};
-    background-color: ${({ theme }) => theme.color.backgroundGray};
+    background-color: ${({ theme }) => theme.color.lightGray};
+    overflow-y: scroll;
   }
+
   input {
     border: none;
     outline: none;

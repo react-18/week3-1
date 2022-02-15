@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { setConstantValue } from 'typescript';
 import Header from '../components/Header';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/theme';
@@ -9,6 +10,9 @@ import * as S from './styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [pageTitle, setPageTitle] = useState('니콘내콘');
+  function handlePageTitle(title) {
+    setPageTitle(title);
+  }
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -18,7 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <Header pageTitle={pageTitle} />
         </S.Header>
         <S.Page>
-          <Component {...pageProps} setPageTitle={setPageTitle} />
+          <Component {...pageProps} handlePageTitle={handlePageTitle} />
         </S.Page>
       </S.Wrap>
     </ThemeProvider>

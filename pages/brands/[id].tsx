@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import React, { useEffect, useState } from 'react';
-import ConItem from '../../components/conItem';
+import ConItem from '../../components/shared/ConItem';
 import * as S from './styled';
 
-function Brands({ setPageTitle, data, query }) {
+function Brands({ handlePageTitle, data, query }) {
   console.log(query);
   const [products, setProducts] = useState([]);
   const brands = data.conCategory1.conCategory2s;
@@ -14,7 +14,7 @@ function Brands({ setPageTitle, data, query }) {
 
   useEffect(() => {
     setProducts(selectedBrand[0].conItems);
-    setPageTitle(selectedBrand[0].name);
+    handlePageTitle(selectedBrand[0].name);
   }, []);
 
   return (

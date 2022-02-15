@@ -3,15 +3,15 @@ import styled, { css } from 'styled-components';
 export const Container = styled.li<{ isList?: boolean }>`
   list-style: none;
   width: 375px;
-  /* padding: 13px 0 13px 17px; */
-  padding: 13px 0 13px 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 13px 0 13px 17px;
+  border-bottom: 1px solid ${({ theme }) => theme.color.textGray};
+  background-color: white;
 
   ${({ isList }) =>
     isList &&
     css`
       height: 124px;
-      /* padding: 17px 0 17px 17px; */
+      padding: 17px 0 17px 17px;
     `}
 `;
 
@@ -22,8 +22,10 @@ export const ItemWrapper = styled.div`
 `;
 
 export const ItemImage = styled.img<{ isList?: boolean }>`
-  width: ${({ isList }) => (isList ? '90px' : '70px')};
-  height: ${({ isList }) => (isList ? '90px' : '70px')};
+  ${({ isList }) => css`
+    width: ${isList ? 90 : 70}px;
+    height: ${isList ? 90 : 70}px;
+  `};
   cursor: pointer;
 `;
 
@@ -38,7 +40,7 @@ export const ItemNameText = styled.span<{ isList?: boolean }>`
 `;
 
 export const DiscountText = styled.span`
-  color: #ff5757;
+  color: ${({ theme }) => theme.color.pointRed};
   margin-right: 9px;
 `;
 
@@ -47,7 +49,7 @@ export const SellingPriceText = styled.span`
 `;
 
 export const GrayText = styled.span<{ isList?: boolean }>`
-  color: #808080;
+  color: ${({ theme }) => theme.color.textGray};
   font-size: 14px;
   ${({ isList }) =>
     !isList &&

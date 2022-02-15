@@ -3,8 +3,14 @@ import styled from 'styled-components';
 export const Wrapper = styled.div<{ isSideBarOpened: boolean }>`
   position: fixed;
   top: 0;
+<<<<<<< HEAD
   width: 375px;
   height: 812px;
+=======
+  left: 0;
+  width: 375px;
+  height: 700px;
+>>>>>>> 7e82503 (Feat: 고객 센터, 상품목록  페이지 구현)
   transition: all 0.1s ease-in;
   display: ${({ isSideBarOpened }) => (isSideBarOpened ? 'block' : 'none')};
 `;

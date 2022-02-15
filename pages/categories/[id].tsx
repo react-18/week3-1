@@ -8,16 +8,21 @@ import CategoryList from '../../components/shared/CategoryList';
 import { BRAND } from '../../constants/api';
 import * as S from './styled';
 
-const Category: NextPage = ({ param, query }) => {
+const Category: NextPage = ({ handlePageTitle, param, query }) => {
   const router = useRouter();
   const { id } = router.query; // 동적 라우팅
   console.log(Number(param), query + 'dddd');
   const [response, setResponse] = useState();
+  console.log(query + 'dd');
 
   useEffect(async (): void => {
     const responseData = await axios.get(BRAND(id));
     setResponse(responseData);
   }, [id]);
+
+  useEffect(() => {
+    handlePageTitle(query);
+  }, []);
 
   return (
     <S.Wrap>
@@ -39,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   return {
     props: {
       param: params.id,
-      query: query,
+      query: query.cateName,
     },
   };
 };

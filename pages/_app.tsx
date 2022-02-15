@@ -10,7 +10,7 @@ import * as S from './styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [pageTitle, setPageTitle] = useState('니콘내콘');
-  function handlePageTitle(title) {
+  function handlePageTitle(title: string) {
     setPageTitle(title);
   }
   return (

@@ -38,7 +38,6 @@ const Home: NextPage = () => {
           key={item.id}
           brandName="땡처리"
           isList={true}
-          // link={`/categories/${item.id}`}
         />
       ))}
     </Wrap>

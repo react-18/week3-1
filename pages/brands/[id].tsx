@@ -15,7 +15,7 @@ function Brands({ handlePageTitle, data, query }) {
   useEffect(() => {
     setProducts(selectedBrand[0].conItems);
     handlePageTitle(selectedBrand[0].name);
-  }, []);
+  }, [handlePageTitle, selectedBrand]);
 
   return (
     <>

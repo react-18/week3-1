@@ -9,6 +9,9 @@ import * as S from './styled';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [pageTitle, setPageTitle] = useState('니콘내콘');
+  function handlePageTitle(title: string) {
+    setPageTitle(title);
+  }
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -18,7 +21,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <Header pageTitle={pageTitle} />
         </S.Header>
         <S.Page>
-          <Component {...pageProps} setPageTitle={setPageTitle} />
+          <Component {...pageProps} handlePageTitle={handlePageTitle} />
         </S.Page>
       </S.Wrap>
     </ThemeProvider>

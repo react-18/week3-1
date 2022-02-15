@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import React, { useState } from 'react';
-import ConItem from '../../components/ConItem';
+import ConItem from '../../components/shared/ConItem';
 import OptionButton from '../../components/OptionButton';
 import WarningBox from '../../components/WarningBox';
 import { DetailProps } from './types';

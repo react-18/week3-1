@@ -10,8 +10,8 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
     try {
       const result = await axios.request(params);
       setResponse(result);
-    } catch (err: any) {
-      setError(err);
+    } catch (err) {
+      setError(err as AxiosError);
     } finally {
       setLoading(false);
     }
@@ -19,7 +19,7 @@ const useAxios = (axiosParams: AxiosRequestConfig) => {
 
   useEffect(() => {
     fetchData(axiosParams);
-  }, []);
+  }, [axiosParams]);
 
   return { response, error, loading };
 };

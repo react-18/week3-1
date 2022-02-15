@@ -12,7 +12,7 @@ interface Categories {
   categories: Category[];
   type: string;
   link: string;
-  categoryId: number;
+  categoryId?: number;
 }
 
 function CategoryList({ link, categories, type, categoryId }: Categories) {

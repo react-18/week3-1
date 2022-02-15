@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.2.6",
     "@types/styled-components": "^5.1.22",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
@@ -15,6 +16,7 @@
     "babel-plugin-styled-components": "^2.0.2",
     "cypress": "^9.4.1",
     "next": "12.0.10",
+    "next-on-netlify": "^3.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
